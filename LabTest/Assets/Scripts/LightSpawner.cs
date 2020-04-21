@@ -7,7 +7,7 @@ public class LightSpawner : MonoBehaviour
     public int numLights = 10;
     public float radius = 10;
     public GameObject TrafficLight;
-    List<GameObject> Lights = new List<GameObject>();
+    public List<GameObject> Lights = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
