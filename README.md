@@ -14,5 +14,3 @@ There are 10 “traffic lights” arranged in a circle of radius 10 centred arou
 The purple “car” picks a green traffic light to go to at random. It should only ever go to a green traffic light.  When it arrives at a green traffic light it should pick another green traffic light to arrive at. If the traffic light it's heading for turns yellow or red when it's on the way, it should pick a different traffic light to go to.
 
 To get full marks, you should use steering behaviours and at least one finite state machine in your solution. Also you should generate the traffic lights procedurally. Other equally complex and flexible solutions are also acceptable. You can use any of the example code in this repository in your solution. 
-
-[![Video](http://img.youtube.com/vi/NMDupdv85FE/0.jpg)](http://www.youtube.com/watch?NMDupdv85FE)

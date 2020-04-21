@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class LightChanger : MonoBehaviour
 {
+    public int Colour;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Colour = Random.Range(1, 4);
+        StartCoroutine("ColourChange");
     }
 
     // Update is called once per frame
-    void Update()
+    
+    IEnumerator ColourChange()
     {
-        
+        switch(Colour)
+        {
+            case 1:
+                {
+                    transform.GetComponent<Renderer>().material.color = Color.green;
+                    yield return new WaitForSeconds(Random.Range(5, 11));
+                    Colour = 2;
+                    break;
+                }
+            case 2:
+                {
+                    transform.GetComponent<Renderer>().material.color = Color.yellow;
+                    yield return new WaitForSeconds(4);
+                    Colour = 3;
+                    break;
+                }
+            case 3:
+                {
+                    transform.GetComponent<Renderer>().material.color = Color.red;
+                    yield return new WaitForSeconds(Random.Range(5, 11));
+                    Colour = 1;
+                    break;
+                }
+        }
+        StartCoroutine("ColourChange");
     }
 }

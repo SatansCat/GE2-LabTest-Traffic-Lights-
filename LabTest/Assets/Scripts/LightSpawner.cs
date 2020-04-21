@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class LightSpawner : MonoBehaviour
 {
-    public int numLights;
+    public int numLights = 10;
+    public float radius = 10;
+    public GameObject TrafficLight;
+    List<GameObject> Lights = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +18,17 @@ public class LightSpawner : MonoBehaviour
     void CreateLights()
     {
         float theta = (Mathf.PI * 2.0f) / numLights;
-    }
+        for (int i=0; i<numLights; i++)
+        {
+            Vector3 pos = new Vector3(
+                Mathf.Sin(theta*i)*radius
+                , 1
+                , Mathf.Cos(theta*i)*radius);
+            //pos = transform.TransformPoint(pos);
 
-    // Update is called once per frame
-    void Update()
-    {
+            GameObject Temp = Instantiate(TrafficLight, pos, Quaternion.identity);
+            Lights.Add(Temp);
+        }
         
     }
 }
