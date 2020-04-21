@@ -18,6 +18,7 @@ public class LightChanger : MonoBehaviour
     {
         switch(Colour)
         {
+            //Green
             case 1:
                 {
                     transform.GetComponent<Renderer>().material.color = Color.green;
@@ -25,6 +26,7 @@ public class LightChanger : MonoBehaviour
                     Colour = 2;
                     break;
                 }
+            //Yellow
             case 2:
                 {
                     transform.GetComponent<Renderer>().material.color = Color.yellow;
@@ -32,6 +34,7 @@ public class LightChanger : MonoBehaviour
                     Colour = 3;
                     break;
                 }
+            //Red
             case 3:
                 {
                     transform.GetComponent<Renderer>().material.color = Color.red;
